@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<package name="user" namespace="/user" extends="default">
+		<action name="userAction_*" class="org.lqz.sale.web.UserAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/user/user/jUserList.jsp</result>
+		    <result name="toview">/WEB-INF/pages/user/user/jUserView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/user/user/jUserCreate.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/user/user/jUserUpdate.jsp</result>
+		    <result name="alist" type="redirectAction">userAction_list</result>
+		</action>
+		
+		<action name="roleAction_*" class="org.lqz.sale.web.RoleAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/user/role/jRoleList.jsp</result>
+		    <result name="toview">/WEB-INF/pages/user/role/jRoleView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/user/role/jRoleCreate.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/user/role/jRoleUpdate.jsp</result>
+		    <result name="alist" type="redirectAction">roleAction_list</result>
+		</action>
+		
+	</package>
+
+	
+</struts>
+	

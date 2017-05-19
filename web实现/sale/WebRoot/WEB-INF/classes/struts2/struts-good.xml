@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<package name="goods" namespace="/goods" extends="default">
+		<action name="goodAction_*" class="org.lqz.sale.web.GoodAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/goods/jGoodList.jsp</result>
+		    <result name="toview">/WEB-INF/pages/goods/jGoodView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/goods/jGoodCreate.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/goods/jGoodUpdate.jsp</result>
+		    <result name="alist" type="redirectAction">goodAction_list</result>
+		</action>
+		
+	</package>
+
+	
+</struts>
+	

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<property name="hibernate.dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+
+	<property name="show_sql">false</property>
+	<property name="format_sql">true</property>
+	<property name="hbm2ddl.auto">update</property><!-- none、update -->
+
+	<!-- 懒加载，配合web.xml中配置的 openSessionInViewFilter -->
+	<property name="hibernate.enable_lazy_load_no_trans">true</property>
+	<!--校验模式  JPA  java persistent api-->
+	<property name="javax.persistence.validation.mode">none</property>
+
+	<mapping resource="org/lqz/sale/domain/Category.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/Good.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/Sale.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/SaleGoods.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/Stock.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/StockGoods.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/User.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/Warehouse.hbm.xml" />
+	<mapping resource="org/lqz/sale/domain/Role.hbm.xml"/>
+
+</session-factory>
+</hibernate-configuration>
