@@ -25,7 +25,7 @@
     	 	 alert("确认删除？");
     		 formSubmit('goodAction_delete','_self');
     	 }else{
-    		 alert("请先选择一项并且只能选择一项，再进行操作！");
+    		 alert("请先选择一项以上，再进行操作！");
     	 }
      }
      //实现更新

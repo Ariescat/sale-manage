@@ -140,7 +140,6 @@ public class GoodAction extends BaseAction implements ModelDriven<Good> {
 	 */
 	public String delete() throws Exception {
 		String ids[] = model.getId().split(", ");
-		
 		//调用业务方法，实现批量删除
 		goodService.delete(Good.class, ids);
 				

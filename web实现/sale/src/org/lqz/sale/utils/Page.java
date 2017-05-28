@@ -3,8 +3,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
- 
 /**
  * 分页辅助类：对分页的基本数据进行一个简单的封装
  * 用来传递分页参数和查询参数params

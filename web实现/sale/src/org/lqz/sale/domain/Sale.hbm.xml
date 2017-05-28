@@ -11,7 +11,7 @@
 		<property name="delFlag" column="del_flag" />
 
 		<!-- 销售单对销售货物, 一对多 -->
-		<set name="saleGoods" cascade="all" inverse="true">
+		<set name="saleGoods" cascade="all-delete-orphan" inverse="true">
 			<key column="sale_id"></key>
 			<one-to-many class="SaleGoods" />
 		</set>

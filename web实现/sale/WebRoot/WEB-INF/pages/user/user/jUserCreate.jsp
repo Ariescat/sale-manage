@@ -15,7 +15,7 @@
 <form action="user/userAction_insert" class="form-horizontal" role="form" method="post">
 <div>
 	<ul class="nav nav-pills">
-	  <li><a href="#" onclick="formSubmit('goodAction_list','_self')"><img alt="add" src="${ctx }/img/back.png"></a></li>
+	  <li><a href="#" onclick="formSubmit('userAction_list','_self')"><img alt="add" src="${ctx }/img/back.png"></a></li>
 	  <li><a href="#" onclick="formSubmit('userAction_insert','_self')"><img alt="modify" src="${ctx }/img/save.png"></a></li>
 	</ul>
 </div>
@@ -38,7 +38,6 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<input type="hidden" id="selectValue" name="identity" value="">
 		<label class="col-md-2 control-label">身份</label>
 		<div class="col-md-10">
 			<s:select cssClass="form-control" name="role.id" list="#roles" headerKey="" headerValue="--请选择--" listKey="id" listValue="name"></s:select>

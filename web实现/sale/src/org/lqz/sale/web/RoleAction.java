@@ -1,11 +1,8 @@
 package org.lqz.sale.web;
 
-
 import java.util.List;
 
 import org.lqz.sale.domain.Role;
-import org.lqz.sale.domain.Role;
-import org.lqz.sale.service.RoleService;
 import org.lqz.sale.service.RoleService;
 import org.lqz.sale.utils.Page;
 

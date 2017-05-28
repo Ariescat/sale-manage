@@ -26,13 +26,20 @@
 		    <result name="alist" type="redirectAction">warehouseAction_list</result>
 		</action>
 		
-		<action name="stockAction_*" class="org.lqz.sale.web.StockAction" method="{1}">
-		    <result name="listin">/WEB-INF/pages/invoicing/stock/jStockListIn.jsp</result>
-		    <result name="listout">/WEB-INF/pages/invoicing/stock/jStockListOut.jsp</result>
+		<action name="stockInAction_*" class="org.lqz.sale.web.StockInAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/invoicing/stock/jStockListIn.jsp</result>
 		    <result name="toview">/WEB-INF/pages/invoicing/stock/jStockView.jsp</result>
-		    <result name="tocreate">/WEB-INF/pages/invoicing/stock/jStockCreate.jsp</result>
-		    <result name="toupdate">/WEB-INF/pages/invoicing/stock/jStockUpdate.jsp</result>
-		    <result name="alist" type="redirectAction">stockAction_list</result>
+		    <result name="tocreate">/WEB-INF/pages/invoicing/stock/jStockCreateIn.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/invoicing/stock/jStockUpdateIn.jsp</result>
+		    <result name="alist" type="redirectAction">stockInAction_list</result>
+		</action>
+		
+		<action name="stockOutAction_*" class="org.lqz.sale.web.StockOutAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/invoicing/stock/jStockListOut.jsp</result>
+		    <result name="toview">/WEB-INF/pages/invoicing/stock/jStockView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/invoicing/stock/jStockCreateOut.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/invoicing/stock/jStockUpdateOut.jsp</result>
+		    <result name="alist" type="redirectAction">stockOutAction_list</result>
 		</action>
 		
 		<action name="saleAction_*" class="org.lqz.sale.web.SaleAction" method="{1}">

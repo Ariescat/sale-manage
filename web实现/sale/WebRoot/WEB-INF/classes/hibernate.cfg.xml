@@ -12,7 +12,7 @@
 	</property>
 
 	<property name="show_sql">false</property>
-	<property name="format_sql">true</property>
+	<property name="format_sql">false</property>
 	<property name="hbm2ddl.auto">update</property><!-- none、update -->
 
 	<!-- 懒加载，配合web.xml中配置的 openSessionInViewFilter -->

@@ -12,7 +12,7 @@
 		<property name="delFlag" column="del_flag" />
 
 		<!-- 出入库与货物 一对多 -->
-		<set name="stockGoods" cascade="all" inverse="true">
+		<set name="stockGoods" cascade="all-delete-orphan" inverse="true">
 			<key column="stock_id"></key>
 			<one-to-many class="StockGoods" />
 		</set>

@@ -15,7 +15,7 @@
 		<many-to-one name="stock" class="Stock" column="stock_id" />
 
 		<!-- 销售货物与商品， 一对一 -->
-		<one-to-one name="good" class="Good" cascade="all"></one-to-one>
-
+		<many-to-one name="good" class="Good" column="good_id" />
+		
 	</class>
 </hibernate-mapping>    

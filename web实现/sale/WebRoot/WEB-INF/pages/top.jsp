@@ -14,10 +14,13 @@
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a>
+					<a href="#">欢迎你, ${curUser.name }</a>
 				</li>
 				<li>
-					<a href="login"><span class="glyphicon glyphicon-log-in"></span> 登录</a>
+					<a href="logout"><span class="glyphicon glyphicon-user"></span> 注册</a>
+				</li>
+				<li>
+					<a href="logout"><span class="glyphicon glyphicon-log-in"></span> 退出</a>
 				</li>
 			</ul>
 		</div>

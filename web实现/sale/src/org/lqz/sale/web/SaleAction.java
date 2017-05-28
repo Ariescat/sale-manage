@@ -1,12 +1,10 @@
 package org.lqz.sale.web;
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
 import org.lqz.sale.domain.Good;
-import org.lqz.sale.domain.Role;
 import org.lqz.sale.domain.Sale;
 import org.lqz.sale.domain.SaleGoods;
 import org.lqz.sale.domain.User;
@@ -104,13 +102,9 @@ public class SaleAction extends BaseAction implements ModelDriven<Sale> {
 	 */
 	public String tocreate() throws Exception {
 		// 1.创建一个新订单
-		Role role = new Role();
-		role.setId("402881625c20430b015c204690360000");
-		User handler = new User();
-		handler.setId("402881625c20430b015c2048f1fe0004");
-		handler.setRole(role);
+		User curUser = super.getCurUser();
 		model.setId(null);
-		model.setHandler(handler);
+		model.setHandler(curUser);
 		model.setDelFlag(0);
 		saleService.saveOrUpdate(model);
 		super.push(model);
@@ -173,24 +167,17 @@ public class SaleAction extends BaseAction implements ModelDriven<Sale> {
 	}
 	private void deleteSaleGood(){
 		String ids[] = goodId.split(", ");
-		
+
 		// 查询出销售单
 		Sale sale = saleService.get(Sale.class, model.getId());
-		Set<SaleGoods> saleGoods = sale.getSaleGoods();
-		for (String id : ids) {
-			for (Iterator<SaleGoods> iterator = saleGoods.iterator(); iterator.hasNext();) {
-				SaleGoods saleGood = (SaleGoods) iterator.next();
-				if (saleGood.getId().equals(id)) {
-					iterator.remove();
-					saleGoodsService.deleteById(SaleGoods.class, saleGood.getId());
-				}
-			}
-		}
-		sale.setSaleGoods(saleGoods);
-		saleService.saveOrUpdate(sale);
-		super.put("results", saleGoods);
+		
 		//调用业务方法，实现批量删除
-		//saleGoodsService.delete(SaleGoods.class, ids);
+		for (String id : ids) {
+			saleGood = saleGoodsService.get(SaleGoods.class, id);
+			sale.getSaleGoods().remove(saleGood);
+			saleService.saveOrUpdate(sale);
+		}
+		super.put("results", sale.getSaleGoods());
 		
 		// 查询出所有商品
 		List<Good> goods = goodService.find("from Good where delFlag=0", Good.class, null);
@@ -208,11 +195,13 @@ public class SaleAction extends BaseAction implements ModelDriven<Sale> {
 	 * 进入修改页面
 	 */
 	public String toupdate() throws Exception {
+		
 		// 查询出销售单
 		Sale sale = saleService.get(Sale.class, model.getId());	
 		// 得到该销售单下原有的货物
 		pageGoods = sale.getSaleGoods();
 		super.put("results", pageGoods);
+		
 		return "toupdate";
 	}
 
