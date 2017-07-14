@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<package name="invoicing" namespace="/invoicing" extends="default">
+	
+		<action name="categoryAction_*" class="org.lqz.sale.web.CategoryAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/invoicing/category/jCategoryList.jsp</result>
+		    <result name="toview">/WEB-INF/pages/invoicing/category/jCategoryView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/invoicing/category/jCategoryCreate.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/invoicing/category/jCategoryUpdate.jsp</result>
+		    <result name="alist" type="redirectAction">categoryAction_list</result>
+		</action>
+		
+ 		<action name="warehouseAction_*" class="org.lqz.sale.web.WarehouseAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/invoicing/warehouse/jWarehouseList.jsp</result>
+		    <result name="toview">/WEB-INF/pages/invoicing/warehouse/jWarehouseView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/invoicing/warehouse/jWarehouseCreate.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/invoicing/warehouse/jWarehouseUpdate.jsp</result>
+		    <result name="alist" type="redirectAction">warehouseAction_list</result>
+		</action>
+		
+		<action name="stockInAction_*" class="org.lqz.sale.web.StockInAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/invoicing/stock/jStockListIn.jsp</result>
+		    <result name="toview">/WEB-INF/pages/invoicing/stock/jStockView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/invoicing/stock/jStockCreateIn.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/invoicing/stock/jStockUpdateIn.jsp</result>
+		    <result name="alist" type="redirectAction">stockInAction_list</result>
+		</action>
+		
+		<action name="stockOutAction_*" class="org.lqz.sale.web.StockOutAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/invoicing/stock/jStockListOut.jsp</result>
+		    <result name="toview">/WEB-INF/pages/invoicing/stock/jStockView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/invoicing/stock/jStockCreateOut.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/invoicing/stock/jStockUpdateOut.jsp</result>
+		    <result name="alist" type="redirectAction">stockOutAction_list</result>
+		</action>
+		
+		<action name="saleAction_*" class="org.lqz.sale.web.SaleAction" method="{1}">
+		    <result name="list">/WEB-INF/pages/invoicing/sale/jSaleList.jsp</result>
+		    <result name="toview">/WEB-INF/pages/invoicing/sale/jSaleView.jsp</result>
+		    <result name="tocreate">/WEB-INF/pages/invoicing/sale/jSaleCreate.jsp</result>
+		    <result name="toupdate">/WEB-INF/pages/invoicing/sale/jSaleUpdate.jsp</result>
+		    <result name="alist" type="redirectAction">saleAction_list</result>
+		</action>
+		
+	</package>
+
+	
+</struts>
+	

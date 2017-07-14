@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.lqz.sale.domain">
+	<class name="Category" table="category" dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="category_id">
+			<generator class="uuid" />
+		</id>
+		
+		<property name="name" column="name" />
+		<property name="delFlag" column="del_flag" />
+
+		<!-- 分类对商品 一对多 -->
+		<set name="goods" cascade="all" inverse="true">
+			<key column="category_id"></key>
+			<one-to-many class="Good" />
+		</set>
+	</class>
+</hibernate-mapping>    

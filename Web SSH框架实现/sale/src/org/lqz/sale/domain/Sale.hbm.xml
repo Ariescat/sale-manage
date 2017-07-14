@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.lqz.sale.domain">
+	<class name="Sale" table="sale" dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="sale_id">
+			<generator class="uuid" />
+		</id>
+
+		<property name="delFlag" column="del_flag" />
+
+		<!-- 销售单对销售货物, 一对多 -->
+		<set name="saleGoods" cascade="all-delete-orphan" inverse="true">
+			<key column="sale_id"></key>
+			<one-to-many class="SaleGoods" />
+		</set>
+
+		<!-- 销售单对经手人， 多对一 -->
+		<many-to-one name="handler" class="User" column="handler_id" />
+		
+	</class>
+</hibernate-mapping>    

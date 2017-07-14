@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.lqz.sale.domain">
+	<class name="Good" table="goods" dynamic-insert="true" dynamic-update="true">
+		<id name="id" column="good_id">
+			<generator class="uuid" />
+		</id>
+		<property name="name" column="name" />
+		<property name="price" column="price" />
+		<property name="origin" column="origin" />
+		<property name="stock" column="stock" />
+		<property name="delFlag" column="del_flag" />
+
+		<!-- 商品与分类 多对一 -->
+		<many-to-one name="category" class="Category" column="category_id" />
+
+		<!-- 商品与仓库 多对一 -->
+		<many-to-one name="warehouse" class="Warehouse" column="warehouse_id" />
+		
+	</class>
+</hibernate-mapping>    
