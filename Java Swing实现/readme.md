@@ -22,18 +22,22 @@ salesmanagement.sql  数据库脚本
 3.在myeclipse中修改根目录的jdbc.properties文件，username和password改成自己数据库的用户和密码
 <br /><br />
 4.找到下图的类 右键 Run as Java Application 即可
-![avatar](image/help.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/swing/help.png)
 
 ## 运行后界面图：
 
->**首页**
-![avatar](image/show1.png)
+**首页**
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/swing/show1.png)
+<br/><br/>
 **基础数据**
-![avatar](image/show2.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/swing/show2.png)
+<br/><br/>
 **进销存管理**
-![avatar](image/show3.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/swing/show3.png)
+<br/><br/>
 **用户股那里**
-![avatar](image/show4.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/swing/show4.png)
+<br/><br/>
 
 ## 数据库说明：
 

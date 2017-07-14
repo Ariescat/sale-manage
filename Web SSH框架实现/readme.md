@@ -22,13 +22,18 @@ sale.pdm			数据模型
 
 ## 运行后界面图：
 
->**登陆界面**
-![avatar](image/show1.png)
+**登陆界面**
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/web/show1.png)
+<br /><br />
 **首页**
-![avatar](image/show2.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/web/show2.png)
+<br /><br />
 **商品页面**
-![avatar](image/show3.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/web/show3.png)
+<br /><br />
 **销售、库存、仓库、分类管理页面**
-![avatar](image/show4.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/web/show4.png)
+<br /><br />
 **用户、权限管理页面**
-![avatar](image/show5.png)
+![avatar](https://github.com/1275563227/MarkdownPhotos/blob/master/sale/web/show5.png)
+<br /><br />
