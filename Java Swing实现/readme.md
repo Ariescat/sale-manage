@@ -20,9 +20,9 @@
 
 ## 使用说明：
 
-0. 使用 **Java Swing** 开发
+0. 使用 **Java Swing** 开发，JDK版本为7
 
-1. 在数据库中运行根目录的 **salesmanagement.sql** 脚本 （默认会创建名为“salesmanagement”的数据库，并导入数据，若默认创建不了，则需手动创建名为“salesmanagement"的数据库，再运行该 SQL 脚本）
+1. 在数据库中运行根目录的 **salesmanagement.sql** 脚本 （默认会创建名为 “salesmanagement” 的数据库，并导入数据，若默认创建不了，则需手动创建名为 “salesmanagement" 的数据库，再运行该 SQL 脚本）
 
 2. **myeclipse 10**（用该 IDE 开发，**idea** 也是可以的）导入工程的源码
 
